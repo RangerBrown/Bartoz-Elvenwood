@@ -333,7 +333,7 @@ function initScrollAnimations() {
   // --- Stagger text reveals (.word) ---
   const staggers = [
     '.see-more-headline', '.about-statement', '.footer-headline',
-    '.offer-statement', '.types-statement', '.testimonial-quote',
+    '.offer-statement', '.types-statement',
     '.about-hero-headline', '.services-hero-headline', '.work-gallery-headline',
     '.promises-statement', '.render-reality-statement', '.education-statement',
     '.ec-invitation-headline', '.faq-statement', '.team-journey-statement', '.leadership-statement'
@@ -342,6 +342,26 @@ function initScrollAnimations() {
   staggers.forEach(selector => {
     const group = document.querySelector(selector);
     if (!group) return;
+    const words = group.querySelectorAll('.word');
+    if (!words.length) return;
+
+    gsap.to(words, {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      stagger: 0.04,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: group,
+        start: 'top 80%',
+        end: 'bottom 60%',
+        toggleActions: 'play none none none',
+      }
+    });
+  });
+
+  // --- Testimonial quotes: animate ALL instances (querySelectorAll) ---
+  document.querySelectorAll('.testimonial-quote').forEach(group => {
     const words = group.querySelectorAll('.word');
     if (!words.length) return;
 
