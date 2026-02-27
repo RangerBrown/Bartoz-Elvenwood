@@ -1796,9 +1796,7 @@ button:hover .arrow-icon {
   position: relative;
   width: 100%;
   overflow: hidden;
-  padding: 0;
-  margin-top: -2rem;
-  /* Pull up to tighten the gap above */
+  padding: 1rem 0;
 }
 
 .about-marquee-inner {
@@ -1817,8 +1815,7 @@ button:hover .arrow-icon {
   letter-spacing: -0.04em;
   flex-shrink: 0;
   padding: 0 0.5rem;
-  line-height: 0.8;
-  /* Force a tight bounding box on massive text */
+  line-height: 1;
 }
 
 .marquee-image-inset {
@@ -2371,71 +2368,51 @@ button:hover .arrow-icon {
 .service-cards {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-large);
+  gap: 0;
 }
 
 .service-card {
   display: grid;
-  grid-template-columns: 45% 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: var(--gap-large);
   align-items: start;
-  padding: var(--gap-large) 0;
-  border-top: 1px solid rgba(45, 43, 44, 0.1);
-  background-color: var(--color-light);
-  transition: transform var(--duration-normal) var(--ease-smooth),
-    box-shadow var(--duration-normal) var(--ease-smooth);
-}
-
-.service-card:hover {
-  box-shadow: var(--shadow-md);
+  padding: var(--gap-standard) 0;
+  border-top: 1px solid rgba(45, 43, 44, 0.12);
+  transition: background-color 0.3s ease;
 }
 
 .service-card:last-child {
-  border-bottom: 1px solid rgba(45, 43, 44, 0.1);
+  border-bottom: 1px solid rgba(45, 43, 44, 0.12);
 }
 
-.service-card-image {
-  aspect-ratio: 4/3;
-  border-radius: clamp(0.75rem, 0.5rem + 0.5vw, 1.5rem);
-  overflow: hidden;
-}
-
-.service-card-image img {
-  /* width/height/object-fit handled by .image-reveal img */
-  transition: transform 0.6s var(--ease-out);
-}
-
-.service-card:hover .service-card-image img {
-  transform: scale(1.03);
-}
-
-.service-card-content {
+.service-card-left {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: var(--space-sm);
+  gap: var(--space-md);
 }
 
-.service-card-content h3 {
+.service-card-left h3 {
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 1.25rem + 1.25vw, 2.5rem);
+  font-size: clamp(1.5rem, 1rem + 1.5vw, 2.25rem);
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.02em;
   color: var(--color-dark);
 }
 
-.service-card-desc {
-  font-family: var(--font-sans);
-  font-size: clamp(1rem, 0.9rem + 0.25vw, 1.125rem);
+.service-card-right {
+  padding-top: 0.25rem;
+}
+
+.service-card-right p {
+  font-size: clamp(0.95rem, 0.85rem + 0.25vw, 1.1rem);
   line-height: 1.7;
   color: var(--color-text-dark);
-  opacity: 0.8;
+  opacity: 0.75;
   max-width: 500px;
 }
 
 .service-card .btn-pill {
-  margin-top: var(--space-sm);
   align-self: flex-start;
 }
 
