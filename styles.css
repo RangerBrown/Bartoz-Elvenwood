@@ -1786,7 +1786,7 @@ button:hover .arrow-icon {
 
 /* ---------- About Section ---------- */
 .section--about {
-  padding-top: var(--gap-large);
+  padding-top: 0;
   padding-bottom: 0;
   overflow: hidden;
   background-color: var(--color-off-white);
@@ -1796,7 +1796,9 @@ button:hover .arrow-icon {
   position: relative;
   width: 100%;
   overflow: hidden;
-  padding: 1rem 0;
+  padding: 0;
+  margin-top: -2rem;
+  /* Pull up to tighten the gap above */
 }
 
 .about-marquee-inner {
@@ -1815,6 +1817,8 @@ button:hover .arrow-icon {
   letter-spacing: -0.04em;
   flex-shrink: 0;
   padding: 0 0.5rem;
+  line-height: 0.8;
+  /* Force a tight bounding box on massive text */
 }
 
 .marquee-image-inset {
@@ -1833,9 +1837,9 @@ button:hover .arrow-icon {
 }
 
 .about-content {
-  padding: var(--gap-large) var(--section-padding-x) var(--section-padding-y);
-  background-color: var(--color-light);
-  color: var(--color-text-dark);
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--gap-standard) var(--section-padding-x) var(--section-padding-y);
 }
 
 .about-label {
