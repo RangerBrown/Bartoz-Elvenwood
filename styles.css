@@ -2369,6 +2369,7 @@ button:hover .arrow-icon {
   display: flex;
   flex-direction: column;
   gap: 0;
+  position: relative;
 }
 
 .service-card {
@@ -2376,13 +2377,25 @@ button:hover .arrow-icon {
   grid-template-columns: 1fr 1fr;
   gap: var(--gap-large);
   align-items: start;
-  padding: var(--gap-standard) 0;
-  border-top: 1px solid rgba(45, 43, 44, 0.12);
-  transition: background-color 0.3s ease;
+  padding: var(--gap-large);
+  border-radius: clamp(0.75rem, 0.5rem + 0.5vw, 1.5rem);
+  background-color: var(--color-off-white);
+  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 100px;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.service-card:nth-child(2) {
+  top: 130px;
+}
+
+.service-card:nth-child(3) {
+  top: 160px;
 }
 
 .service-card:last-child {
-  border-bottom: 1px solid rgba(45, 43, 44, 0.12);
+  border-bottom: none;
 }
 
 .service-card-left {

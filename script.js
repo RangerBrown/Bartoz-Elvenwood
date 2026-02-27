@@ -480,20 +480,33 @@ function initScrollAnimations() {
     });
   });
 
-  // --- Service cards (grid) fade in ---
-  document.querySelectorAll('.service-card').forEach((card) => {
-    gsap.to(card, {
-      opacity: 1,
-      y: 0,
-      duration: 0.8,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: card,
-        start: 'top 85%',
-        toggleActions: 'play none none none',
+  // --- Service cards: Card-on-card stacking animation ---
+  const serviceCards = document.querySelectorAll('.service-card');
+  if (serviceCards.length) {
+    // First, make all cards visible (override the opacity:0 initial state)
+    serviceCards.forEach(card => {
+      gsap.set(card, { opacity: 1, y: 0 });
+    });
+
+    // Animate each card except the last one:
+    // As you scroll past it, it scales down and dims slightly,
+    // creating the illusion of being pushed back into a stack
+    serviceCards.forEach((card, i) => {
+      if (i < serviceCards.length - 1) {
+        gsap.to(card, {
+          scale: 0.92,
+          opacity: 0.5,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 100px',
+            end: 'bottom 100px',
+            scrub: 0.5,
+          }
+        });
       }
     });
-  });
+  }
 
   // --- Testimonial fade in ---
   document.querySelectorAll('.testimonial').forEach((item) => {
