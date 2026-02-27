@@ -1724,12 +1724,16 @@ button:hover .arrow-icon {
 }
 
 /* ---------- See More CTA ---------- */
+.section--work-preview {
+  padding-bottom: 0;
+}
+
 .see-more {
   display: flex;
   align-items: center;
   gap: var(--gap-standard);
-  margin-top: var(--gap-huge);
-  padding: var(--gap-large) 0;
+  margin-top: var(--gap-large);
+  padding: var(--gap-standard) 0;
 }
 
 .see-more-image {

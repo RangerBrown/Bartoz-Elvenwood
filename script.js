@@ -330,18 +330,21 @@ function initScrollAnimations() {
     });
     return;
   }
+  // --- Stagger text reveals (.word) ---
+  const staggers = [
+    '.see-more-headline', '.about-statement', '.footer-headline',
+    '.offer-statement', '.types-statement', '.testimonial-quote',
+    '.about-hero-headline', '.services-hero-headline', '.work-gallery-headline',
+    '.promises-statement', '.render-reality-statement', '.education-statement',
+    '.ec-invitation-headline', '.faq-statement', '.team-journey-statement', '.leadership-statement'
+  ];
 
-  // --- Word reveals on scroll ---
-  const wordGroups = document.querySelectorAll(
-    '.see-more-headline, .about-statement, .footer-headline, ' +
-    '.offer-statement, .types-statement, .testimonial-quote, ' +
-    '.about-hero-headline, .services-hero-headline, .work-gallery-headline, ' +
-    '.promises-statement, .render-reality-statement, .education-statement, ' +
-    '.ec-invitation-headline, .faq-statement, .team-journey-statement, .leadership-statement'
-  );
-  wordGroups.forEach(group => {
+  staggers.forEach(selector => {
+    const group = document.querySelector(selector);
+    if (!group) return;
     const words = group.querySelectorAll('.word');
     if (!words.length) return;
+
     gsap.to(words, {
       opacity: 1,
       y: 0,
@@ -356,7 +359,6 @@ function initScrollAnimations() {
       }
     });
   });
-
   // --- Project cards with stagger (improved) ---
   const projectCards = document.querySelectorAll('.project-card');
   if (projectCards.length) {
@@ -437,13 +439,13 @@ function initScrollAnimations() {
   const marqueeInner = document.querySelector('.about-marquee-inner');
   if (marqueeInner) {
     gsap.to(marqueeInner, {
-      xPercent: -15,
+      xPercent: -50,
       ease: 'none',
       scrollTrigger: {
         trigger: '.about-marquee',
         start: 'top bottom',
         end: 'bottom top',
-        scrub: 0.5,
+        scrub: 1,
       }
     });
   }
