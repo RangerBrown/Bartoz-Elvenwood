@@ -69,10 +69,10 @@
 
   /* Neutral Colors */
   --color-white: #FFFFFF;
-  --color-off-white: #F5F5F5;
+  --color-off-white: #FAF9F6;
   --color-cream: #FAF8F5;
   --color-slate: #565656;
-  --color-charcoal: #2D2B2C;
+  --color-charcoal: #101010;
 
   /* Accent Colors */
   --color-blush: #FFDDD7;
@@ -156,8 +156,8 @@
   --space-3xl: 8rem;
   /* 128px */
 
-  /* Section Padding - Matching reference (~64-128px vertical) */
-  --section-padding-y: clamp(4rem, 2rem + 5vw, 8rem);
+  /* Section Padding - Matching reference (~64-256px vertical) */
+  --section-padding-y: clamp(5rem, 5vh + 8vw, 16rem);
   --section-padding-x: clamp(1.5rem, 1rem + 2vw, 4rem);
   --container-max: 1400px;
   --content-max: 1200px;
@@ -166,7 +166,7 @@
   --gap-tight: clamp(0.5rem, 0.5rem + 0.5vw, 1rem);
   --gap-standard: clamp(1.5rem, 1rem + 1vw, 2.5rem);
   --gap-large: clamp(2.5rem, 1.5rem + 2vw, 4.5rem);
-  --gap-huge: clamp(4rem, 2rem + 3vw, 7rem);
+  --gap-huge: clamp(6rem, 4rem + 4vw, 12rem);
 
   /* ===== SHADOWS (Elevation Scale) ===== */
   /* Neutral shadows */
@@ -427,6 +427,56 @@ address {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* ===== THEME UTILITIES ===== */
+.bg-dark {
+  background-color: var(--color-charcoal) !important;
+  color: var(--color-off-white) !important;
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark h4,
+.bg-dark h5,
+.bg-dark h6,
+.bg-dark p,
+.bg-dark .word {
+  color: var(--color-off-white) !important;
+}
+
+.bg-dark .label {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.bg-dark .divider {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Specific Component Inversions for Dark Rhythm */
+.bg-dark .client-story-quote {
+  color: var(--color-off-white) !important;
+  opacity: 0.95;
+}
+
+.bg-dark .stat-value {
+  color: var(--color-white) !important;
+}
+
+.bg-dark .stat-label {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.bg-dark .image-overlay-block {
+  background-color: var(--color-off-white) !important;
+  color: var(--color-charcoal) !important;
+}
+
+.bg-dark .image-overlay-block h3,
+.bg-dark .image-overlay-block h4,
+.bg-dark .image-overlay-block p {
+  color: var(--color-charcoal) !important;
 }
 
 /* Focus visible helper - removes outline on mouse, shows on keyboard */
@@ -5331,9 +5381,9 @@ button:focus-visible {
 
 /* Enhanced Door Artifact Visibility */
 .door-artifact--hero {
-  opacity: 0.12;
+  opacity: 1 !important;
   right: -2%;
-  filter: drop-shadow(0 20px 40px rgba(147, 6, 50, 0.06));
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.05));
 }
 
 /* Header Logo Hover State */
