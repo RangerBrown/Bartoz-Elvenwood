@@ -156,17 +156,17 @@
   --space-3xl: 8rem;
   /* 128px */
 
-  /* Section Padding - Matching reference (~64-256px vertical) */
-  --section-padding-y: clamp(5rem, 5vh + 8vw, 16rem);
+  /* Section Padding - Matching reference tighter vertical spacing */
+  --section-padding-y: clamp(4rem, 5vh + 5vw, 9rem);
   --section-padding-x: clamp(1.5rem, 1rem + 2vw, 4rem);
   --container-max: 1400px;
   --content-max: 1200px;
 
   /* Content Gaps - Tighter like reference */
-  --gap-tight: clamp(0.5rem, 0.5rem + 0.5vw, 1rem);
-  --gap-standard: clamp(1.5rem, 1rem + 1vw, 2.5rem);
-  --gap-large: clamp(2.5rem, 1.5rem + 2vw, 4.5rem);
-  --gap-huge: clamp(6rem, 4rem + 4vw, 12rem);
+  --gap-tight: clamp(0.5rem, 0.5rem + 0.25vw, 1rem);
+  --gap-standard: clamp(1.25rem, 1rem + 1vw, 2rem);
+  --gap-large: clamp(2rem, 1.5rem + 2vw, 4rem);
+  --gap-huge: clamp(4rem, 3rem + 4vw, 8rem);
 
   /* ===== SHADOWS (Elevation Scale) ===== */
   /* Neutral shadows */
@@ -1782,6 +1782,7 @@ button:hover .arrow-icon {
 
 /* ---------- About Section ---------- */
 .section--about {
+  padding-top: var(--gap-large);
   padding-bottom: 0;
   overflow: hidden;
   background-color: var(--color-off-white);
