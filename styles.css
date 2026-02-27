@@ -135,10 +135,10 @@
 
   --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-in-out: cubic-bezier(0.4, 0, 0.4, 1);
-  --ease-smooth: cubic-bezier(0.23, 1, 0.32, 1);
-  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
-  --transition-smooth: cubic-bezier(0.23, 1, 0.32, 1);
-  --transition-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: var(--ease-smooth);
+  --ease-bounce: var(--ease-bounce);
+  --transition-smooth: var(--ease-smooth);
+  --transition-bounce: var(--ease-bounce);
 
   /* ===== SPACING SCALE (Tighter like reference) ===== */
   --space-xs: 0.625rem;
@@ -240,9 +240,8 @@ body {
   background-color: var(--color-off-white);
   color: var(--color-charcoal);
   overflow-x: hidden;
-  cursor: none;
-  font-weight: 300;
-  /* Lighter weight like reference */
+  font-weight: 400;
+  /* Editorial legibility */
   letter-spacing: -0.01em;
 }
 
@@ -274,7 +273,6 @@ body::before {
 a {
   color: inherit;
   text-decoration: none;
-  cursor: none;
 }
 
 /* ===== LINK UNDERLINE ANIMATIONS (like reference) ===== */
@@ -293,7 +291,7 @@ a {
   background-color: currentColor;
   transform: scaleX(0);
   transform-origin: right center;
-  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.4s var(--ease-smooth);
 }
 
 .link-underline:hover::after {
@@ -328,7 +326,7 @@ a {
   background-color: var(--color-burgundy);
   transform: scaleX(0);
   transform-origin: right center;
-  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.3s var(--ease-smooth);
 }
 
 .nav-link:hover::after,
@@ -338,7 +336,6 @@ a {
 }
 
 button {
-  cursor: none;
   border: none;
   background: none;
   font-family: inherit;
@@ -354,7 +351,7 @@ img {
 
 /* Scale up slightly on hover for interactive elements */
 .hover-lift {
-  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.3s var(--ease-smooth);
 }
 
 .hover-lift:hover {
@@ -363,7 +360,7 @@ img {
 
 /* Subtle scale effect */
 .hover-scale {
-  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.3s var(--ease-smooth);
 }
 
 .hover-scale:hover {
@@ -402,8 +399,8 @@ address {
   left: 50%;
   transform: translateX(-50%);
   padding: 1rem 2rem;
-  background: var(--color-accent);
-  color: var(--color-dark);
+  background: var(--color-burgundy);
+  color: var(--color-white);
   font-family: var(--font-sans);
   font-size: 0.875rem;
   font-weight: 600;
@@ -1222,10 +1219,10 @@ address {
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
   transition:
-    background 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+    background 0.5s var(--ease-smooth),
     backdrop-filter 0.5s ease,
     padding 0.3s ease,
-    transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    transform 0.4s var(--ease-smooth);
   color: var(--color-charcoal);
   will-change: transform, background;
 }
@@ -1587,7 +1584,7 @@ button:hover .arrow-icon {
   height: 100%;
   object-fit: cover;
   transform: scale(1);
-  transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.8s var(--ease-smooth);
 }
 
 /* ---------- Work Section ---------- */
@@ -1720,14 +1717,16 @@ button:hover .arrow-icon {
   justify-content: center;
   width: 56px;
   height: 56px;
-  border-radius: 50%;
-  border: 1px solid var(--color-border-dark);
+  border-radius: 100px;
+  border: 1px solid rgba(45, 43, 44, 0.15);
   font-size: 1.2rem;
-  transition: background-color 0.3s ease, transform 0.3s var(--transition-smooth);
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s var(--transition-smooth);
 }
 
 .btn-circle:hover {
-  background-color: rgba(255, 221, 215, 0.1);
+  background-color: var(--color-burgundy);
+  border-color: var(--color-burgundy);
+  color: var(--color-white);
   transform: scale(1.1);
 }
 
@@ -1794,7 +1793,7 @@ button:hover .arrow-icon {
 .about-divider {
   width: 100%;
   height: 1px;
-  background-color: var(--color-border-light);
+  background-color: rgba(45, 43, 44, 0.1);
   margin-bottom: var(--gap-large);
 }
 
@@ -1922,7 +1921,7 @@ button:hover .arrow-icon {
 .service-divider {
   width: 100%;
   height: 1px;
-  background-color: var(--color-border-light);
+  background-color: rgba(45, 43, 44, 0.1);
 }
 
 /* Service Extras */
@@ -1983,30 +1982,27 @@ button:hover .arrow-icon {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  padding: 0.75rem 1.75rem;
+  padding: 0.85rem 2rem;
   border-radius: 100px;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  transition: all var(--duration-normal) var(--ease-smooth),
-    transform var(--duration-normal) var(--ease-out),
-    box-shadow var(--duration-normal) var(--ease-out);
+  transition: all var(--duration-normal) var(--ease-smooth);
 }
 
 .btn-pill:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .btn-pill:active {
   transform: translateY(0);
-  box-shadow: var(--shadow-sm);
 }
 
 .btn-pill--dark {
   background-color: var(--color-dark);
-  color: var(--color-lime);
+  color: var(--color-white);
 }
 
 .btn-pill--dark:hover {
@@ -2014,13 +2010,15 @@ button:hover .arrow-icon {
 }
 
 .btn-pill--outline {
-  border: 1px solid var(--color-border-dark);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   background: transparent;
-  color: var(--color-lime);
+  color: var(--color-white);
 }
 
 .btn-pill--outline:hover {
-  background-color: rgba(255, 221, 215, 0.08);
+  border-color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-dark);
 }
 
 /* ---------- Footer ---------- */
@@ -2067,7 +2065,7 @@ button:hover .arrow-icon {
 .footer-divider {
   width: 100%;
   height: 1px;
-  background-color: var(--color-border-dark);
+  background-color: rgba(255, 255, 255, 0.1);
   margin-bottom: 3rem;
 }
 
@@ -2184,7 +2182,7 @@ button:hover .arrow-icon {
     0 4px 24px rgba(0, 0, 0, 0.15),
     0 1px 3px rgba(0, 0, 0, 0.1);
   will-change: transform, opacity;
-  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+  transition: transform 0.4s var(--ease-smooth),
     opacity 0.3s ease,
     background 0.3s ease;
 }
@@ -2205,7 +2203,7 @@ button:hover .arrow-icon {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.7);
   border-radius: 100px;
-  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1), color 0.3s ease;
+  transition: all 0.3s var(--ease-smooth), color 0.3s ease;
   opacity: 0.6;
 }
 
@@ -2323,7 +2321,7 @@ button:hover .arrow-icon {
   gap: var(--gap-large);
   align-items: start;
   padding: var(--gap-large) 0;
-  border-top: 1px solid var(--color-border-light);
+  border-top: 1px solid rgba(45, 43, 44, 0.1);
   background-color: var(--color-light);
   transition: transform var(--duration-normal) var(--ease-smooth),
     box-shadow var(--duration-normal) var(--ease-smooth);
@@ -2334,7 +2332,7 @@ button:hover .arrow-icon {
 }
 
 .service-card:last-child {
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom: 1px solid rgba(45, 43, 44, 0.1);
 }
 
 .service-card-image {
@@ -2576,7 +2574,7 @@ button:hover .arrow-icon {
   padding: 4rem 1rem;
   margin: -1rem;
   border-radius: 8px;
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+  transition: transform 0.4s var(--ease-bounce),
     background-color 0.3s ease;
 }
 
@@ -3176,7 +3174,7 @@ body.is-loading {
 .promises-header {
   margin-bottom: 2rem;
   position: relative;
-  z-index: 2;
+  z-index: var(--z-raised);
 }
 
 .promises-label {
@@ -3196,7 +3194,7 @@ body.is-loading {
   max-width: 900px;
   color: var(--color-blush);
   position: relative;
-  z-index: 2;
+  z-index: var(--z-raised);
 }
 
 .promises-grid {
@@ -3204,7 +3202,7 @@ body.is-loading {
   grid-template-columns: repeat(2, 1fr);
   gap: var(--gap-standard);
   position: relative;
-  z-index: 2;
+  z-index: var(--z-raised);
 }
 
 .promise-card {
@@ -3790,8 +3788,8 @@ body.is-loading {
   overflow: hidden;
   background: var(--color-white);
   transition:
-    transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
-    box-shadow 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    transform 0.5s var(--ease-smooth),
+    box-shadow 0.5s var(--ease-smooth);
   cursor: none;
 }
 
@@ -4298,7 +4296,7 @@ body.is-loading {
   }
 
   .about-content {
-    padding: 2.5rem 1.25rem 4rem;
+    padding: var(--gap-large) var(--section-padding-x) var(--section-padding-y);
   }
 
   .about-statement {
@@ -4314,7 +4312,7 @@ body.is-loading {
   }
 
   .section--services {
-    padding: 3rem 1.25rem;
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .service-item {
@@ -4335,7 +4333,7 @@ body.is-loading {
   }
 
   .section--footer {
-    padding: 3rem 1.25rem 0;
+    padding: var(--section-padding-y) var(--section-padding-x) 0;
   }
 
   .footer-email,
@@ -4393,7 +4391,7 @@ body.is-loading {
   }
 
   .section--offer {
-    padding: 3rem 1.25rem 4rem;
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .offer-statement {
@@ -4410,7 +4408,7 @@ body.is-loading {
   }
 
   .section--types {
-    padding: 3rem 1.25rem 2rem;
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .types-slide {
@@ -4418,7 +4416,7 @@ body.is-loading {
   }
 
   .section--testimonials {
-    padding: 3rem 1.25rem 4rem;
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .testimonial-quote {
@@ -4426,7 +4424,7 @@ body.is-loading {
   }
 
   .section--work-gallery {
-    padding: 4rem 1.25rem 2rem;
+    padding: var(--section-padding-y) var(--section-padding-x) 2rem;
   }
 
   .work-gallery-card {
@@ -4435,16 +4433,16 @@ body.is-loading {
 
   .section--about-hero {
     min-height: 50vh;
-    padding: 4rem 1.25rem 2rem;
+    padding: var(--section-padding-y) var(--section-padding-x) 2rem;
   }
 
   .section--about-story {
-    padding: 3rem 1.25rem 4rem;
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .section--services-hero {
     min-height: 40vh;
-    padding: 4rem 1.25rem 2rem;
+    padding: var(--section-padding-y) var(--section-padding-x) 2rem;
   }
 
   .section--trust-strip {
@@ -4462,7 +4460,7 @@ body.is-loading {
   }
 
   .section--client-story {
-    padding: 3rem 1.25rem;
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .client-story-content {
@@ -4480,7 +4478,7 @@ body.is-loading {
   }
 
   .section--render-reality {
-    padding: 3rem 1.25rem;
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .render-reality-comparisons {
@@ -4492,7 +4490,7 @@ body.is-loading {
   }
 
   .section--promises {
-    padding: 3rem 1.25rem;
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .promises-grid {
@@ -4505,7 +4503,7 @@ body.is-loading {
   }
 
   .section--ec-invitation {
-    padding: 3rem 1.25rem;
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .ec-invitation-content {
@@ -4518,7 +4516,7 @@ body.is-loading {
   }
 
   .section--education {
-    padding: 3rem 1.25rem;
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .education-articles {
@@ -4534,7 +4532,7 @@ body.is-loading {
   }
 
   .section--service-detail {
-    padding: 3rem 1.25rem;
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .service-detail-inner,
@@ -4549,7 +4547,7 @@ body.is-loading {
   }
 
   .section--faq {
-    padding: 3rem 1.25rem;
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .faq-list {
@@ -4562,7 +4560,7 @@ body.is-loading {
   }
 
   .section--work-hero {
-    padding: 4rem 1.25rem 1.5rem;
+    padding: var(--section-padding-y) var(--section-padding-x) 1.5rem;
   }
 
   .work-filters {
@@ -4575,7 +4573,7 @@ body.is-loading {
   }
 
   .section--featured-project {
-    padding: 3rem 1.25rem;
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .featured-project-inner {
@@ -4588,7 +4586,7 @@ body.is-loading {
   }
 
   .section--project-grid {
-    padding: 2rem 1.25rem 4rem;
+    padding: 2rem var(--section-padding-x) var(--section-padding-y);
   }
 
   .project-grid {
@@ -4597,7 +4595,7 @@ body.is-loading {
   }
 
   .section--team-journey {
-    padding: 3rem 1.25rem;
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .team-journey-grid {
@@ -4611,7 +4609,7 @@ body.is-loading {
   }
 
   .section--team-simple {
-    padding: 3rem 1.25rem;
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .team-simple-grid {
@@ -4641,7 +4639,7 @@ body.is-loading {
   }
 
   .section--md-note {
-    padding: 3rem 1.25rem;
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .section--md-note .md-note {
@@ -4649,7 +4647,7 @@ body.is-loading {
   }
 
   .section--leadership {
-    padding: 3rem 1.25rem;
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .leadership-grid {
@@ -5039,7 +5037,7 @@ button:focus-visible {
 .line-artifact {
   position: absolute;
   pointer-events: none;
-  z-index: 2;
+  z-index: var(--z-raised);
   opacity: 0;
   transition: opacity 0.6s ease, transform 0.6s ease;
   animation: line-fade-in 1s ease-out forwards;
@@ -5425,7 +5423,7 @@ button:focus-visible {
   width: 0;
   height: 2px;
   background: var(--color-terracotta);
-  transition: width 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: width 0.3s var(--ease-smooth);
   border-radius: 1px;
 }
 
@@ -5454,7 +5452,7 @@ button:focus-visible {
 .vision-content {
   text-align: center;
   max-width: 900px;
-  z-index: 2;
+  z-index: var(--z-raised);
 }
 
 .vision-label {
@@ -5533,7 +5531,7 @@ button:focus-visible {
 
 .brand-cta-content {
   position: relative;
-  z-index: 2;
+  z-index: var(--z-raised);
   max-width: 700px;
 }
 
@@ -5612,7 +5610,7 @@ button:focus-visible,
 
 /* Featured project enhanced interactions */
 .featured-project-main {
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.5s var(--ease-bounce);
 }
 
 .featured-project-inner:hover .featured-project-main {
@@ -5678,7 +5676,7 @@ button:focus-visible,
 
 /* Portrait frame enhanced hover */
 .portrait-frame {
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+  transition: transform 0.3s var(--ease-bounce),
     box-shadow 0.3s ease,
     border-color 0.3s ease;
 }
@@ -5712,7 +5710,7 @@ button:focus-visible,
 
 /* Terracotta overlay block slide-in effect */
 .image-overlay-block {
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+  transition: transform 0.4s var(--ease-bounce), opacity 0.3s ease;
   transform: translateY(8px);
   opacity: 0.95;
 }
@@ -5745,7 +5743,7 @@ button:focus-visible,
 
 /* Promise card icon animation */
 .promise-icon {
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.4s var(--ease-bounce);
 }
 
 .promise-card:hover .promise-icon {
