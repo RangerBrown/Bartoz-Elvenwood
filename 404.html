@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found — Elvenwood Interiors</title>
+    <meta name="description" content="The page you're looking for doesn't exist. Return to Elvenwood Interiors homepage.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="apple-touch-icon" href="images/logo.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* 404 Page Specific Styles */
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+            background: var(--color-off-white);
+        }
+
+        .error-code {
+            font-family: var(--font-display);
+            font-size: clamp(8rem, 20vw, 16rem);
+            font-weight: 300;
+            line-height: 1;
+            color: var(--color-burgundy);
+            opacity: 0.15;
+            margin-bottom: -2rem;
+        }
+
+        .error-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 500;
+            color: var(--color-charcoal);
+            margin-bottom: 1rem;
+        }
+
+        .error-title .word--italic {
+            font-family: var(--font-display), Georgia, serif;
+            font-style: italic;
+        }
+
+        .error-message {
+            font-size: 1.1rem;
+            color: var(--color-slate);
+            max-width: 400px;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .error-logo {
+            position: absolute;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .error-logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .error-decoration {
+            position: absolute;
+            bottom: 2rem;
+            opacity: 0.1;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Logo -->
+    <a href="index.html" class="error-logo" aria-label="Return to homepage">
+        <img src="images/logo-full.png" alt="Elvenwood Interiors">
+    </a>
+
+    <!-- Error Content -->
+    <main class="error-page">
+        <span class="error-code" aria-hidden="true">404</span>
+        <h1 class="error-title">
+            Page <span class="word--italic">Not Found</span>
+        </h1>
+        <p class="error-message">
+            The page you're looking for doesn't exist or has been moved. Let's get you back on track.
+        </p>
+        <div class="error-actions">
+            <a href="index.html" class="btn-pill">
+                Back to Home
+                <span class="arrow-icon" aria-hidden="true">→</span>
+            </a>
+            <a href="work.html" class="btn-pill btn-pill--outline">
+                View Our Work
+            </a>
+        </div>
+
+        <!-- Decorative Element -->
+        <img src="images/logo-watermark.svg" alt="" class="error-decoration" aria-hidden="true">
+    </main>
+
+</body>
+
+</html>

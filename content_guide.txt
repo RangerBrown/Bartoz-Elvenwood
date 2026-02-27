@@ -1,0 +1,559 @@
+ELVENWOOD INTERIORS
+Website Content Guide
+Content strategy, principles, and page-by-page copy
+Source: Wireframe V3 (Verified) + UI/UX Research Report
+February 2026
+Home, as imagined.
+Part One: Content Strategy
+This section explains why the website content is structured the way it is. Read this before the page-by-page content in Part Two. Anyone adding, editing, or approving website content should understand these principles so that new content stays consistent with the strategy.
+What This Website Is For
+The Elvenwood website has one job: convert a skeptical homeowner into someone who either WhatsApps us or walks into the Experience Centre.
+It is not an online store. It is not a portfolio gallery. It is not a brochure about the company. It is a trust-building tool that answers every question a worried homeowner has before they feel comfortable enough to start a conversation.
+This matters because of how the industry works. 84.8% of modular kitchen purchases in India happen through offline channels — showrooms and experience centres. People don’t buy kitchens online. They research online, develop a shortlist, then visit in person. Our website’s success is measured by how many people it sends to our Experience Centre or our WhatsApp, not by how long they browse or how many pages they view.
+Every content decision should serve this question: does this make a skeptical homeowner more likely to WhatsApp us or visit the Experience Centre?
+The Customer We’re Writing For
+Our audience is Bangalore homeowners aged 30–50, mid-premium budget (₹5L–₹25L for interiors), who value reliability over the lowest price. Most of them are not first-time buyers of home services. Many have already been burned — by missed timelines, inflated quotes, poor communication, or work that didn’t match the design.
+This is the critical insight that shapes everything: our customers are not browsing for inspiration. They are scanning for red flags.
+When someone lands on our website, they’re not thinking “show me beautiful kitchens.” They’re thinking:
+Will the price change after I pay?
+Will anyone respond after I pay?
+Will it look like the render?
+Will they deliver on time?
+Can I get my money back if something goes wrong?
+Are these real projects or stock photos?
+These aren’t hypothetical fears. They come from hundreds of real complaints we analysed across HomeLane, Decorpot, Houzz, Interior Define, and others. The same seven pain points appear everywhere: pricing deception, communication blackout after payment, quality-vs-promise gap, timeline lies, impossible refunds, customer service voids, and non-refundable bookings before clarity.
+Our website’s job is to answer these fears before they’re asked. Not with reassuring words, but with visible, verifiable evidence.
+The Welcome Book Philosophy
+The website follows what we call the Welcome Book approach. This is the opposite of a sales funnel. A funnel pressures people toward a conversion event. A Welcome Book invites people in, gives them everything they need to make a decision, and trusts them to act when they’re ready.
+Three principles define this approach:
+1. Proof Before Claims
+The website shows evidence of Elvenwood’s quality before making any claims about it. On the Home page, a real client story appears before the company introduces itself. The visitor sees a family in their completed kitchen, reads their words, and sees the project data (timeline, budget, on-time delivery) before Elvenwood says anything like “we’re reliable” or “we deliver on time.”
+This matters because claims are cheap. Every competitor says they deliver on time. Every competitor says they use premium materials. The difference is showing it first and letting the visitor draw their own conclusion. When you lead with proof, the claims that follow feel like confirmation rather than marketing.
+When adding new content: always ask whether the proof is visible before the claim. If you’re writing a statement about Elvenwood’s quality, ask what evidence the visitor has already seen that supports it. If the answer is “none yet,” move the proof earlier.
+2. Invitation, Not Funnel
+Every call-to-action on the website is an invitation. The language is “When you’re ready, come see for yourself” not “Book now.” It’s “WhatsApp us” not “Get a free quote.” It’s “See more homes we’ve built” not “Submit your details.”
+This is a deliberate choice. “Get a free quote” is the default CTA across HomeLane, Decorpot, and Livspace. For customers who’ve experienced bait-and-switch pricing, that phrase sounds like a trap. “Free quote” implies the quote will change later. “Book now” creates pressure. Our customers have been pressured before. They respond better to patience.
+When writing new CTAs: use inviting language. “Come see,” “Talk to us,” “Visit when you’re ready.” Never “Book now,” “Don’t miss out,” “Limited offer,” or “Get a free quote.”
+3. The Truth Test
+Every statement on the website must pass one of three filters:
+Filter
+Definition
+Example
+General Truth
+Something anyone would agree with, even someone who has never heard of Elvenwood
+"Your kitchen is where mornings begin"
+Verifiable on the Spot
+Something the visitor can confirm themselves without trusting us first
+"Come visit our factory" — they can actually go
+Third-Party Proof
+Evidence that doesn’t come from us: real client names, partner brand logos, video testimonials
+"Priya S., Whitefield" with a QR code to her video
+If a statement doesn’t pass any of these three filters, it doesn’t belong on the website. This is what separates Elvenwood’s content from competitors who say “world-class quality” or “premium finishes” without any proof.
+When adding new content: run the Truth Test. Can anyone agree with this? Can the visitor verify it? Is there third-party evidence? If none of these apply, rewrite it until one does, or remove it.
+Why the Content Flows This Way
+The website isn’t structured around what Elvenwood wants to say. It’s structured around the order in which a skeptical homeowner needs to receive information before they feel comfortable taking action.
+Research shows interior website visitors follow a predictable decision sequence:
+Can I trust these people? (First 8 seconds — hero, trust strip, visual quality)
+Have they actually done good work? (Client story, portfolio)
+How does their process work? (Process preview, team names)
+Are they transparent about the things that matter? (Pricing, factory, materials)
+What do other customers say? (Testimonials, video proof)
+What’s my next step? (WhatsApp, Experience Centre visit)
+The Home page mirrors this sequence exactly. Each section builds on the trust established by the one before it. Moving sections around — for example, putting the factory section before the client story — would break this progression because the visitor hasn’t yet seen proof that the factory produces good results.
+The other pages serve visitors who need deeper information on a specific topic. Someone who’s already interested in the process will click through to How We Work. Someone comparing Elvenwood to competitors will spend time on the Portfolio. But the Home page is designed to take a cold visitor through the entire trust-building sequence in a single scroll.
+The Home page is the complete trust journey. Other pages go deeper on individual topics. The Home page should never assume the visitor has seen any other page.
+Voice and Tone
+Elvenwood’s brand voice has five attributes. These aren’t abstract values — they’re practical writing rules that determine what the copy sounds like.
+Reassuring, not boastful. We don’t say “we’re the best.” We say “here’s what we did for the Sharma family.” The proof does the boasting.
+Honest, not evasive. If there’s a limitation, we name it. Pricing ranges instead of hiding prices. “Most projects complete in 4–6 weeks” instead of promising an exact date in marketing copy.
+Warm, not corporate. We write like a knowledgeable friend, not a company. “You share your vision. We ask questions, not pitch.” Not “Our consultation process begins with a comprehensive assessment of your requirements.”
+Specific, not vague. “32 days, 120 sq ft, on budget” not “completed on time and within budget.” Numbers, names, and places always beat adjectives.
+Patient, not pushy. “When you’re ready” is our default tempo. We never create false urgency.
+A quick test: read the copy aloud. Does it sound like something a person would say to a friend who asked about their kitchen renovation? If it sounds like a brochure or an ad, rewrite it.
+Feature-to-Benefit Translation
+Elvenwood has real technical advantages — Biesse CNC machines, Hettich hardware, in-house factory, single-designer model. But technical features don’t mean anything to a homeowner until they’re connected to an outcome the homeowner cares about.
+Every feature on the website is translated into a benefit the customer can feel:
+Technical Feature
+Customer Benefit
+Biesse CNC machines, 0.1mm precision
+Your wardrobe doors close perfectly. Every single time.
+Single dedicated designer
+You never wonder who to call.
+In-house factory, no subcontracting
+No delays from third parties. Your project stays on track.
+Hettich hardware
+Drawers that work smoothly for 20+ years.
+BWP plywood standard
+Your kitchen handles Bangalore’s monsoons and humidity.
+Dedicated Head for each project stage
+A real person is accountable at every stage of your project.
+When adding new content about Elvenwood’s capabilities: always translate the feature. State the technical fact, then immediately connect it to a tangible outcome in the customer’s daily life.
+Why We Show Pricing
+87% of consumers research costs online before contacting any business. Most interior companies hide pricing entirely and force a consultation before revealing even a range. Our research shows this causes 30–40% higher bounce rates. Customers who’ve experienced bait-and-switch pricing interpret hidden prices as a red flag.
+We show approximate ranges by category:
+Kitchens: ₹4L – ₹12L
+Wardrobes: ₹1.5L – ₹6L
+Complete Interiors: ₹8L – ₹25L
+These are wide ranges on purpose. We’re not quoting — we’re giving the visitor enough information to know whether Elvenwood is in their budget before they invest time in a conversation. The disclaimer “Pricing varies by size, materials, and finishes” sets the right expectation.
+In the Portfolio, individual projects show actual budgets (with client permission). This is the strongest form of pricing transparency because it’s attached to a real project the visitor can see.
+Never remove pricing from the website. This is Elvenwood’s single biggest content differentiator against competitors.
+What Competitors Get Wrong (and Why We Do It Differently)
+Understanding competitor mistakes is essential for anyone adding content, because it clarifies what patterns to avoid.
+Competitor Pattern
+Why It Fails
+What Elvenwood Does Instead
+Hero with stock/AI-generated photos
+Customers can’t verify it’s real work. Fails the Truth Test.
+Real completed projects with client names.
+“Get Free Quote” as primary CTA
+Sounds like a bait-and-switch trap after bad experiences.
+“WhatsApp Us” or “Visit the Experience Centre”
+No pricing information anywhere
+Forces contact before basic understanding. 30–40% higher bounce rate.
+Pricing ranges by category. Real budgets in portfolio.
+Portfolio as image gallery only
+Pretty but not persuasive. No story, no context, no proof.
+Every project is a story with name, timeline, budget, client quote.
+Corporate “About Us” page
+Lists awards and founding year. Nobody cares.
+Our Story is about the people you’ll work with, mapped to your journey.
+Hidden phone/WhatsApp number
+Creates suspicion: are these real people?
+Phone and WhatsApp visible on every page.
+Heavy animations, slow page load
+53% of mobile visitors leave at 3+ second load times.
+Performance as a design requirement. Target: under 2 seconds on 4G.
+Chatbot as primary contact
+Feels like a barrier, not a bridge.
+Direct WhatsApp and phone. Real person responds.
+When evaluating new content or features: check if it resembles a competitor pattern on the left column. If it does, reconsider the approach.
+Mobile Comes First
+70%+ of traffic to Bangalore interior websites comes from mobile devices. Mobile users scroll faster, ignore sidebars, and need larger tap targets (minimum 44×44px). Forms with more than 3–4 fields see massive drop-off on mobile.
+Practical implications for content:
+Critical information (trust signals, CTAs, pricing) must appear in the first 50% of the page scroll. Most users never scroll past 50%.
+The visit booking form has only 3 fields: name, WhatsApp number, what are you looking for. Everything else happens in conversation.
+WhatsApp is the primary CTA, not a form. One tap on mobile opens the chat.
+All images must be optimised (WebP format, lazy loading). Every second of load time costs leads.
+Photography Principles
+The brand guide and content strategy define specific rules for imagery. These apply to every photo on the website:
+Candid over staged. People cooking in a kitchen, not posing beside a kitchen. A wardrobe being used, not displayed empty.
+People over empty rooms. Completed spaces with families in them are more persuasive than empty showroom shots. When the space is empty, the visitor imagines a showroom. When a family is in it, the visitor imagines themselves.
+Morning light preferred. Warm, natural lighting. Not studio-lit. Not evening tungsten.
+Factory shots must show workers. The factory is a differentiator because it’s real and operational. Empty factory photos look like stock. Workers make it verifiable.
+No stock photography. Ever. Every image on the website must be a real Elvenwood project, a real team member, or a real space. This is non-negotiable. Stock photos fail the Truth Test immediately.
+How to Add New Content
+When you need to add a new section, page, testimonial, portfolio project, blog article, or any other content to the website, run through this checklist:
+Does it pass the Truth Test? Is it a general truth, verifiable, or backed by third-party proof?
+Does it serve the website’s single job? Will it make a skeptical homeowner more likely to WhatsApp us or visit the EC?
+Is the proof visible before the claim? If you’re making a statement about quality, has the visitor already seen evidence?
+Is the language warm, specific, and patient? Read it aloud. Does it sound like a friend or a brochure?
+Are features translated to benefits? If there’s a technical capability mentioned, is it connected to a customer outcome?
+Are CTAs invitations? “When you’re ready” not “Book now.”
+Is all data real? No placeholder names, no stock photos, no unverified stats.
+Does it work on mobile? Is the critical information in the first scroll? Are forms short?
+If a piece of content passes all eight checks, it belongs on the website. If it fails any of them, revise it until it passes.
+What Each Page Does
+Each page has a specific role in the customer’s decision journey. Understanding these roles prevents overlap and ensures new content goes on the right page.
+Page
+Purpose
+Primary Action
+Home
+Complete trust journey for first-time visitors. Takes a cold visitor from curiosity to confidence in one scroll.
+WhatsApp or visit EC
+Our Story
+For visitors who want to know who’s behind the company. Answers: who will I work with? Why should I trust these people?
+Feel confident about the team
+How We Work
+For visitors who want process detail. Answers: what exactly happens? How long? Who’s responsible? What if something goes wrong?
+Understand the process, then WhatsApp or visit EC
+Our Work
+For visitors comparing Elvenwood to competitors. Answers: have they done work like mine? What were the results?
+See proof, then enquire about their own project
+Experience Centre
+For visitors ready to take the next step. Answers: where is it? What will I see? How do I book?
+Book a visit or WhatsApp
+Contact
+For visitors who want to start a conversation but aren’t ready to visit. Answers: how do I reach them? Will they actually respond?
+Send a message or WhatsApp
+Two important distinctions:
+The Experience Centre page owns the structured visit-booking form. The Contact page does not duplicate it. Contact is for project conversations; EC is for visit bookings.
+The Home page client story and the Portfolio featured project must be different clients. Repeating the same project makes the portfolio look thin.
+Content Pillars
+These pillars govern all Elvenwood content — website, social media, brochure, and video. They ensure a balanced mix of content types rather than over-indexing on any single theme.
+Pillar
+Share
+What It Covers
+Website Presence
+Factory Precision
+30%
+CNC machines, material quality, build process, precision claims
+Factory section, 3D vs Reality, materials info
+Team Journey
+25%
+Team stories, leadership accountability, honest reflections
+Our Story page, team journey map, MD’s Note
+Transformations
+20%
+Before/after, client stories, project walkthroughs
+Client story (Home), Portfolio projects, testimonials
+Design Education
+15%
+Kitchen triangle, storage tips, material guides, cost explainers
+Design Education section (Home), future blog
+Behind the Scenes
+10%
+Team moments, installation day, factory visits, daily work
+Factory tour, installation photos
+When adding new articles, blog posts, or sections: check which pillar it falls under. If the website is already heavy on one pillar, prioritise content from an underrepresented one.
+How We Know It’s Working
+The website’s success is measured by actions, not impressions. These are the metrics that matter:
+Primary: WhatsApp messages received from website visitors, Experience Centre visit bookings, and walk-ins attributed to the website.
+Secondary: Scroll depth on the Home page (are people reaching the EC invitation?), bounce rate (are people leaving immediately?), time on Portfolio page (are they reading project stories?), and form completion rate.
+Tools from day one: Google Analytics 4 (traffic and user flow), Microsoft Clarity (free heatmaps and session recordings — critical for seeing what visitors actually do), Google Search Console (search keywords), WhatsApp Business analytics (response times, conversation outcomes).
+Microsoft Clarity is particularly important. It’s free, and it gives us our own heatmap and scroll data within weeks of launch. Every content decision after launch should be informed by Clarity data rather than assumptions.
+Part Two: Page-by-Page Content
+This section contains all the website copy from Wireframe V3. Use it to replace dummy content in your design. Content is organised by page, in the order sections appear.
+How to read it
+Website copy — shown with a dark left border. This is the actual text to use.
+Context notes in italics — explain what the section is. Not website content.
+Image: Describes what photo is needed for each slot.
+⚠ Replace: Content needing real data before launch.
+Home
+The Home page is the complete trust journey. It takes a first-time visitor from curiosity to confidence in a single scroll: feeling → proof → services → process → factory → transparency → testimonials → invitation.
+Hero
+Modular Kitchens · Wardrobes · Complete Interiors
+Home, as imagined.
+Your kitchen. Your wardrobe. Your living room. Designed by one person, built in our factory, delivered exactly as promised.
+Button: WhatsApp Us
+Button: See Homes We’ve Built →
+Image: Real completed kitchen or living space. Morning/golden light. Warm tones, signs of life.
+Trust Strip
+Three general-truth statements paired with visible contact info.
+One dedicated designer, start to finish
+Built in our own factory — no outsourcing
+Delivered on the day we promise
+📞 +91 XXXXX XXXXX
+💬 WhatsApp
+⚠ Replace: Phone number and WhatsApp number
+Client Story
+A real client project shown before Elvenwood introduces itself. Proof before claims. Must be a different client from the Portfolio featured project.
+A Home We Built
+“We wanted a kitchen that could handle two cooks and a curious toddler.”
+The Sharma family needed their Whitefield kitchen to work as hard as they do. One designer, 32 days, and exactly the budget they planned for. No surprises.
+Stats: 32 days from design to handover  |  120 sq ft kitchen + utility  |  On budget, on time
+Scan to watch Priya’s video testimonial
+Button: See more homes we’ve built →
+Image: Real client family in their completed kitchen, candid. Thumbnails: 4 detail shots.
+⚠ Replace: Client name, location, quote, stats, photo, QR to video. Must have signed permission.
+What We Build
+Three service categories. Each presented as a benefit with pricing ranges shown upfront.
+What we build
+Modular kitchens, wardrobes, and complete home interiors — designed, built, and installed by one team.
+Kitchens
+Morning routines that just work
+Designed for how you actually cook — Indian ventilation needs, humidity-resistant materials, and counter space that handles a real masala kitchen. BWP plywood standard.
+Price range: ₹4L – ₹12L
+Wardrobes
+Everything in its place. Finally.
+Soft-close Hettich drawers, adjustable compartments, moisture-resistant build for Bangalore weather. Enough space for a family of four. Built to last 20+ years.
+Price range: ₹1.5L – ₹6L
+Complete Interiors
+Every room feels like it belongs together
+Living room, study, kids’ room, TV unit — one designer ensures cohesion. One factory ensures quality. One timeline, one budget, no surprises.
+Price range: ₹8L – ₹25L
+Pricing varies by size, materials, and finishes. These ranges cover most Bangalore homes. Visit the Experience Centre for a detailed estimate.
+Process Preview
+Condensed version of the How We Work page. Four steps, each naming the real person.
+From first conversation to final walkthrough
+One designer. One factory. One team. Here’s exactly what happens and who you’ll talk to.
+01 — We listen
+Person: Thyagaraj · Day 1–3
+You share your vision. We ask questions, not pitch. Honest sense of what’s possible within your budget.
+02 — We design
+Person: Kowshik · Week 1–2
+Your dedicated designer creates 3D renders. You review, change, approve. Nothing moves without your sign-off.
+03 — We build
+Person: Karthik · Week 3–5
+Built in our factory, on our machines. You’re welcome to visit anytime and see your project in production.
+04 — We install
+Person: Dilip · Week 5–6
+Our team — not subcontractors — in your home. Dilip oversees until the day you smile and say it’s done.
+Button: See the full process →
+Factory
+Factory transparency is a key differentiator. Leads with an open invitation to visit.
+Where Your Furniture Is Made
+12,000 sq ft. Our machines. Our people.
+Italian Biesse CNC machines cut every panel to 0.1mm precision. That’s why your wardrobe doors close perfectly. Every single time. No outsourcing. No subcontractors.
+You’re welcome to visit the factory anytime.
+Hettich  |  Hafele  |  Century Ply  |  Greenlam
+Image: Factory floor — workers visible, machines running. Detail shots of machine work and team.
+3D Render vs. Reality
+Side-by-side comparisons. Directly addresses: “Will it look like the render?”
+Design is delivery
+What you approve in the 3D design is exactly what gets built. Here’s the proof.
+The Sharma Kitchen, Whitefield — 3D Render | Actual Result — Match ✓
+The Rajan Kitchen, HSR Layout — 3D Render | Actual Result — Match ✓
+Image: For each: 3D render on one side, actual completed space on the other, same angle.
+⚠ Replace: Real 3D renders matched with photos of the same completed spaces.
+Transparency Promises
+Six promises addressing the six most common industry complaints.
+Your peace of mind
+We know what the industry has put you through. Here’s what we do differently.
+No price surprises
+The quote you approve is the price you pay. No escalations after booking. No hidden charges. Ever.
+We actually respond
+WhatsApp reply within 4 hours on working days. Your designer’s direct number from day one. We don’t disappear after payment.
+What you see is what you get
+3D render = final result. Biesse CNC machines cut to 0.1mm. We don’t dilute designs during production.
+The date we say, we mean
+Your handover date is locked before production begins. 8 out of 8 homes delivered on the promised day.
+⚠ Replace: Update delivery stat to current numbers at launch.
+Built for Bangalore weather
+BWP plywood and moisture-resistant laminates as standard. Your kitchen handles monsoons and humidity — not just looks good in photos.
+Fair cancellation terms
+Clear terms in writing before any payment. No ‘non-refundable booking fee’ traps. If we haven’t started production, you can walk away.
+Testimonials
+Three specific testimonials with names, locations, project types, and timelines.
+What families say about us
+Real families. Their own words. You can verify every one.
+“The day they said they’d finish was the day they finished. I didn’t think that was possible anymore.”— Priya S., Whitefield · Kitchen + Wardrobe · 32 days
+“My designer Kowshik understood what I wanted before I could articulate it. And the factory visit sealed the deal.”— Rajan K., HSR Layout · Kitchen · 28 days
+“We’ve had work done before. This is the first time nobody disappeared after the payment. Dilip was there every day.”— Meera & Arjun R., Electronic City · Full Home · 45 days
+⚠ Replace: All testimonials must be real with signed permission.
+Experience Centre Invitation
+Warm invitation using “when you’re ready” language.
+Experience Centre · Bommasandra
+When you’re ready, come see for yourself.
+Walk through real kitchens. Open real drawers. Touch real materials. Ask us anything. No pressure. No pitch. Mon–Sat, 10 AM – 7 PM.
+Button: WhatsApp Us
+Button: Get Directions
+Design Education
+Educational articles. Positions Elvenwood as knowledgeable and generous with information.
+Helpful guides
+A few things worth knowing before you start your interiors project.
+Article 1: The kitchen triangle — Why sink–stove–fridge placement changes how you cook every day
+Article 2: Storage math — How much wardrobe space does a family of four actually need?
+Article 3: Material choices — Marine ply vs MDF — when each one makes sense for Bangalore’s humidity
+Article 4: What affects cost? — The 5 factors that determine your modular kitchen budget
+Our Story
+Opens with the industry problem the team experienced, not self-praise. The team is presented as people the customer will actually work with.
+Hero
+Our Story
+We’ve been on the other side.
+Between the seven of us, we’d worked in this industry long enough to know what homeowners go through. Missed timelines. Vague pricing. Work that doesn’t match the design. So we pooled our experience across sales, design, engineering, production, and operations — and built Elvenwood. Because delivering what we promise is the whole point.
+Image: Candid group photo of the team at the Bommasandra factory.
+The Elvenwood team at our Bommasandra factory
+Your Journey With Us
+Five customer-facing roles. Each mapped to a stage of the project.
+Your journey with us
+At every stage of your project, you’ll work with a specific person — not a department, not a ticket number.
+Thyagaraj — First conversation
+You share how you live. He listens, asks the right questions, and gives you an honest sense of budget and timeline.
+Kowshik — Design
+Your dedicated designer from first sketch to final 3D render. Nothing moves forward without your approval.
+Keerthi — Technical plans
+Every measurement verified twice. You receive detailed drawings — what you approve is exactly what gets built.
+Karthik — Production
+Your furniture is built in our factory, on our machines. You’re welcome to visit and watch it being made.
+Dilip — Installation + handover
+Our team in your home — not subcontractors. Dilip stays until you walk through and say you’re happy.
+Image: Individual headshots for each. Candid/natural style.
+The Leadership Team
+Full team with roles. Each person heads their department.
+The leadership team
+Seven people, each heading a critical part of the process. Between them, every stage of your project has a name and a phone number attached.
+Varun: Managing Director
+Thyagaraj: Head of Sales
+Kowshik: Head of Design
+Keerthi: Head of Technical
+Karthik: Head of Production
+Balu: Head of Accounts & Operations
+Dilip: Head of Projects & Execution
+A Note from Varun
+“When we started Elvenwood, the goal was simple: build a company where what we promise is what we deliver. Every project goes through our factory, our team, and my oversight. If something isn’t right, I’m the one you call.”— Varun, Managing Director, Elvenwood Interiors
+Image: Varun’s headshot beside the quote.
+Values
+What we stand for
+Reliable
+What we say, we do. Timelines are commitments, not suggestions.
+Organized
+One designer, one factory, one system. No confusion about who’s handling what.
+Transparent
+No hidden costs. No material substitutions. You always know what’s happening.
+Precise
+What you see in the 3D design is what you get in your home. No diluted versions.
+How We Work
+The detailed process page. Five steps, each describing the customer’s experience (not Elvenwood’s internal process). Each includes a “You’ll...” outcome.
+Hero
+How It Works
+No surprises. Just a clear path to your finished home.
+Here’s exactly what happens, who you’ll talk to, and how long each step takes. Most projects complete in 4–6 weeks.
+The Process
+01 — First Conversation
+Person: Thyagaraj · Day 1–3
+You share how you live, what you need, and what your budget looks like. We listen, ask questions, and give you an honest sense of what’s possible. No hard sell — this is a conversation, not a pitch.
+You’ll know: approximate budget range, rough timeline, and whether we’re the right fit.
+Image: Consultation scene — at EC or home visit.
+02 — Design
+Person: Kowshik · Week 1–2
+Your dedicated designer creates detailed 3D renders. You review every detail — materials, colors, layouts, hardware. You suggest changes. Nothing moves forward without your approval.
+You’ll see: photorealistic 3D renders of your exact space. What you approve is what we build.
+Image: Designer showing 3D renders on screen to client.
+03 — Technical Plans
+Person: Keerthi · Week 2–3
+Every measurement verified twice. You receive detailed technical drawings showing exactly what will be built. These become the blueprint for production.
+You’ll have: complete drawings you can reference anytime. Full clarity on what’s being built.
+04 — Production
+Person: Karthik · Week 3–5
+Your furniture is built in our 12,000 sq ft factory on Italian Biesse CNC machines. Every panel cut to 0.1mm precision. You’re welcome to visit and see your project being made.
+You can: visit the factory anytime. See your kitchen or wardrobe being built.
+Image: Factory — CNC machine cutting panels, workers visible.
+05 — Installation
+Person: Dilip · Week 5–6
+Our team — not subcontractors — installs everything in your home. Dilip personally oversees every installation until you walk through and confirm you’re satisfied.
+You’ll experience: our team in your home, working until you’re happy. Then handover.
+Image: Installation team at work, then family walkthrough.
+Mid-Page Invitation
+Want to see this process in action?
+Visit the Experience Centre or WhatsApp us — we’ll walk you through it.
+Button: WhatsApp Us
+Button: Visit the Experience Centre
+Common Concerns (FAQ)
+Six questions homeowners ask, answered upfront. Each maps to a real complaint pattern from research.
+Before you decide
+Questions homeowners ask before starting. We’d rather answer them upfront.
+Will the price change after I pay the booking amount?
+No. Your approved quote is your final price. We don’t escalate costs during design or production. The scope, materials, and price are locked before any payment.
+What if I want to cancel after booking?
+Clear, written cancellation terms before any payment. If production hasn’t started, you can cancel with a full refund. No ‘non-refundable booking fee’ traps.
+Will anyone respond to me after I pay?
+Your designer’s direct WhatsApp number from day one. Project updates at every stage. We reply within 4 hours on working days. You’ll never chase us.
+How do I know the finished work will match the design?
+Our Biesse CNC machines cut to 0.1mm precision. Every panel matches the technical drawing exactly. Visit the factory and see for yourself — or check our 3D-vs-reality gallery.
+Will you use the materials you promised?
+Visit the Experience Centre and touch every material we’ll use. Century Ply, Greenlam, Hettich — same brands, same grade. No substitutions. Material samples are part of your approval package.
+Will my kitchen handle Bangalore’s humidity?
+BWP (Boiling Water Proof) plywood and moisture-resistant laminates come standard. Not upsells. Your kitchen is built for monsoons, not just photos.
+Our Work (Portfolio)
+Portfolio as stories. Every project has a real name, timeline, budget, and client quote. Filter tabs: All, Kitchens, Wardrobes, Full Home. One featured project in detail, then a grid of additional projects.
+Hero
+Our Work
+Homes we’ve built.
+Real families. Real kitchens. Real timelines. Real budgets.
+Filter tabs: All | Kitchens | Wardrobes | Full Home
+Featured Project
+One project in full detail with quote, stats, and QR link to video testimonial. Must be a different client from the Home page story.
+Tags: Full Home  |  Whitefield
+The Sharma Home
+“The day they said they’d finish was the day they finished. I didn’t think that was possible anymore in this industry.”— Priya Sharma, Whitefield
+Stats: 32 days  |  3 rooms  |  ₹12L budget  |  On time
+Scan to watch Priya’s video testimonial
+Image: Hero: Family using the space, candid. Thumbnail strip: 4 detail shots.
+⚠ Replace: Real client data. Signed permission and filmed testimonial.
+Project Grid
+Additional projects as cards, each showing name, location, timeline, budget, and type.
+Project 1: The Rajan Kitchen — HSR Layout · 28 days · ₹6L [Kitchen]
+Project 2: The Mehta Wardrobe — Sarjapur · 18 days · ₹3.5L [Wardrobe]
+Project 3: The Krishnan Home — Electronic City · 45 days · ₹18L [Full Home]
+Project 4: The Rao Kitchen — Marathahalli · 30 days · ₹8L [Kitchen]
+⚠ Replace: All projects must be real with client permission.
+Experience Centre
+This page owns the visit-booking form. Tone: warm invitation, not showroom pitch.
+Hero
+Come see for yourself.
+No pressure. No pitch. Walk through real kitchens, open real drawers, feel the finish. Then decide.
+Image: EC interior with visitors exploring. Warm lighting.
+What You’ll Experience
+Real kitchens you can use
+Not display models. Working kitchens with real materials and hardware you can test.
+Wardrobes you can open
+Feel the soft-close. See the organization. Touch every finish.
+Materials you can compare
+Century Ply, Greenlam laminates, Hettich hardware — all here to touch and compare.
+People you can talk to
+The actual team who’ll work on your project. Ask anything — they’re the ones who’ll deliver.
+Visit Booking Form
+Three fields only. WhatsApp as alternative. Google Maps embed beside the form.
+Plan your visit
+Field 1: Your name
+Field 2: WhatsApp number
+Field 3: What are you looking for? (text area)
+Button: Book Visit
+Button: Or just WhatsApp
+We reply within 4 hours. No spam. Ever.
+Location
+Elvenwood Experience Centre
+Bommasandra, Bangalore
+Near [Landmark]
+Mon–Sat, 10 AM – 7 PM
+Walk-ins welcome · Free parking
+⚠ Replace: Full address with landmark. Google Maps embed URL.
+Contact
+Different from the EC page. Contact is for starting a project conversation. EC handles visit bookings. This page focuses on direct channels.
+Hero
+Get In Touch
+When you’re ready, we’re here.
+No hard sell. No follow-up bombardment. Just an honest conversation about your home.
+Contact Form
+Field 1: Your name
+Field 2: Phone or WhatsApp
+Field 3: Email (optional)
+Field 4: Tell us about your project — what rooms, any timelines, rough budget? (large text area)
+Button: Send Message
+We reply within 4 hours during business hours. No spam. Ever.
+Direct Channels
+WhatsApp — Fastest way
++91 XXXXX XXXXX
+Tap to open chat · Usually reply within 1 hour
+Other ways to reach us
+📞 +91 XXXXX XXXXX
+✉️ hello@elvenwoodinteriors.com
+Experience Centre
+Bommasandra, Bangalore
+Mon–Sat, 10 AM – 7 PM
+Walk-ins welcome
+Button: Plan a visit →
+⚠ Replace: Phone number, WhatsApp number, email address.
+Footer
+Appears on all pages.
+Brand
+ELVENWOOD
+Home, as imagined.
+Explore
+Our Work  |  How We Work  |  Our Story  |  Experience Centre  |  Contact
+Visit Us
+Experience Centre, Bommasandra
+Bangalore, Karnataka
+Mon–Sat, 10 AM – 7 PM
+Social icons: Instagram, YouTube, WhatsApp
+Get in Touch
+WhatsApp: +91 XXXXX XXXXX
+Call: +91 XXXXX XXXXX
+hello@elvenwoodinteriors.com
+Bottom bar
+© 2026 Elvenwood Interiors. All rights reserved.
+Your interiors, exactly as promised.
+Content to Replace Before Launch
+Summary of everything marked with ⚠ throughout this document.
+Data
+Phone number (all instances of +91 XXXXX XXXXX)
+WhatsApp number
+Experience Centre full address with landmark
+Google Maps embed URL
+Delivery stats (update to current at launch)
+Email address (confirm hello@elvenwoodinteriors.com)
+Client Content
+Home page client story: name, location, quote, stats, photo, video QR
+Portfolio featured project: name, quote, stats, photo set, video QR
+Portfolio grid: 4+ real projects with names, locations, timelines, budgets
+3 testimonials with signed permission
+2 matched 3D render vs. reality comparison sets
+Video testimonials filmed and uploaded
+Photography
+Hero image (completed kitchen/living space, morning light)
+Client family candid photo
+Service photos: kitchen, wardrobe, living space
+Factory floor (workers + machines) and detail shots
+Team headshots (all 7 members) and group photo
+Experience Centre with visitors
+4–5 completed projects, multiple angles each
