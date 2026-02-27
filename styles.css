@@ -2374,16 +2374,17 @@ button:hover .arrow-icon {
 
 .service-card {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--gap-large);
-  align-items: start;
-  padding: var(--gap-large);
+  grid-template-columns: 35% 1fr 30%;
+  gap: var(--gap-standard);
+  align-items: stretch;
+  padding: var(--gap-standard);
   border-radius: clamp(0.75rem, 0.5rem + 0.5vw, 1.5rem);
   background-color: var(--color-off-white);
   box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 100px;
   transition: transform 0.4s ease, box-shadow 0.3s ease;
+  min-height: 380px;
 }
 
 .service-card:nth-child(2) {
@@ -2398,14 +2399,33 @@ button:hover .arrow-icon {
   border-bottom: none;
 }
 
-.service-card-text {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-  justify-content: center;
+/* Primary image — left column, full bleed */
+.service-card-primary-img {
+  border-radius: clamp(0.5rem, 0.25rem + 0.5vw, 1rem);
+  overflow: hidden;
 }
 
-.service-card-text h3 {
+.service-card-primary-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.service-card:hover .service-card-primary-img img {
+  transform: scale(1.03);
+}
+
+/* Center column — title + MORE */
+.service-card-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-md) 0;
+}
+
+.service-card-center h3 {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 1rem + 1.5vw, 2.5rem);
   font-weight: 500;
@@ -2414,28 +2434,36 @@ button:hover .arrow-icon {
   color: var(--color-dark);
 }
 
-.service-card-text p {
-  font-size: clamp(0.9rem, 0.85rem + 0.2vw, 1.05rem);
-  line-height: 1.7;
+/* Right column — description + secondary image */
+.service-card-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-md) 0;
+}
+
+.service-card-detail p {
+  font-size: clamp(0.85rem, 0.8rem + 0.15vw, 0.95rem);
+  line-height: 1.65;
   color: var(--color-text-dark);
   opacity: 0.7;
-  max-width: 480px;
 }
 
-.service-card-media {
+.service-card-secondary-img {
   border-radius: clamp(0.5rem, 0.25rem + 0.5vw, 1rem);
   overflow: hidden;
-  aspect-ratio: 4/3;
+  aspect-ratio: 16/10;
 }
 
-.service-card-media img {
+.service-card-secondary-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s var(--ease-out);
 }
 
-.service-card:hover .service-card-media img {
+.service-card:hover .service-card-secondary-img img {
   transform: scale(1.03);
 }
 
