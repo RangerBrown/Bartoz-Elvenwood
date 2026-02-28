@@ -334,7 +334,8 @@ function initScrollAnimations() {
   const staggers = [
     '.see-more-headline', '.about-statement', '.footer-headline',
     '.offer-statement', '.types-statement',
-    '.about-hero-headline', '.services-hero-headline', '.work-gallery-headline',
+    '.about-hero-headline', '.about-philosophy-headline',
+    '.services-hero-headline', '.work-gallery-headline',
     '.promises-statement', '.render-reality-statement', '.education-statement',
     '.ec-invitation-headline', '.faq-statement', '.team-journey-statement', '.leadership-statement'
   ];
@@ -622,9 +623,9 @@ function initScrollAnimations() {
     );
   }
 
-  // --- About story text fade in ---
-  if (document.querySelector('.about-story-text')) {
-    gsap.fromTo('.about-story-text',
+  // --- About page: Philosophy body fade in ---
+  if (document.querySelector('.about-philosophy-body')) {
+    gsap.fromTo('.about-philosophy-body',
       { opacity: 0, y: 40 },
       {
         opacity: 1,
@@ -632,7 +633,91 @@ function initScrollAnimations() {
         duration: 1,
         ease: 'power3.out',
         scrollTrigger: {
-          trigger: '.about-story-text',
+          trigger: '.about-philosophy-body',
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        }
+      }
+    );
+  }
+
+  // --- About page: Principle cards staggered reveal ---
+  const principleCards = document.querySelectorAll('.about-principle-card');
+  if (principleCards.length) {
+    principleCards.forEach(card => {
+      gsap.fromTo(card,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.9,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          }
+        }
+      );
+    });
+  }
+
+  // --- About page: Team hub nodes staggered reveal ---
+  document.querySelectorAll('.about-team-hub').forEach(hub => {
+    const nodes = hub.querySelectorAll('.about-hub-node');
+    if (!nodes.length) return;
+
+    // Center node first, then others
+    const centerNode = hub.querySelector('.about-hub-node--center');
+    const outerNodes = hub.querySelectorAll('.about-hub-node:not(.about-hub-node--center)');
+
+    if (centerNode) {
+      gsap.fromTo(centerNode,
+        { opacity: 0, scale: 0.8 },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 0.8,
+          ease: 'back.out(1.4)',
+          scrollTrigger: {
+            trigger: hub,
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+          }
+        }
+      );
+    }
+
+    if (outerNodes.length) {
+      gsap.fromTo(outerNodes,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          stagger: 0.15,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: hub,
+            start: 'top 75%',
+            toggleActions: 'play none none none',
+          }
+        }
+      );
+    }
+  });
+
+  // --- About page: Founder's note fade in ---
+  if (document.querySelector('.about-note-content')) {
+    gsap.fromTo('.about-note-content',
+      { opacity: 0, y: 30 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '.about-note-content',
           start: 'top 80%',
           toggleActions: 'play none none none',
         }
@@ -763,7 +848,7 @@ function initBackgroundTransitions() {
   }
 
   // Find all light-bg sections and create ScrollTriggers for them
-  const lightSections = document.querySelectorAll('.about-content, .section--offer, .section--about-story');
+  const lightSections = document.querySelectorAll('.about-content, .section--offer, .section--about-philosophy, .section--about-principles, .section--about-note');
   lightSections.forEach(section => {
     ScrollTrigger.create({
       trigger: section,
