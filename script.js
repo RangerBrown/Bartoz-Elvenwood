@@ -2390,7 +2390,65 @@ if (window.location.hostname === 'localhost' || window.location.hostname === '12
 
 /* ---------- Hitoba About Interactions ---------- */
 document.addEventListener('DOMContentLoaded', () => {
-  // Hitoba Parallax
+
+  // 1. Draggable Infinite Slider
+  const sliderTrack = document.querySelector('.hitoba-slider-track');
+  if (sliderTrack && typeof Draggable !== 'undefined') {
+    let getWidth = () => sliderTrack.scrollWidth / 2;
+    let wrap = gsap.utils.wrap(-getWidth(), 0);
+    const proxy = document.createElement("div");
+
+    let sliderTween = gsap.to(sliderTrack, {
+      x: () => -getWidth(),
+      ease: 'none',
+      duration: 30,
+      repeat: -1,
+      modifiers: {
+        x: x => wrap(parseFloat(x)) + "px"
+      }
+    });
+
+    Draggable.create(proxy, {
+      type: "x",
+      trigger: sliderTrack,
+      onPress() {
+        sliderTween.pause();
+        gsap.set(proxy, { x: gsap.getProperty(sliderTrack, "x") });
+      },
+      onDrag() {
+        gsap.set(sliderTrack, { x: wrap(this.x) });
+      },
+      onRelease() {
+        sliderTween.play();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      wrap = gsap.utils.wrap(-getWidth(), 0);
+      sliderTween.invalidate().restart();
+    });
+  }
+
+  // 2. SplitType Story Text Reveals
+  if (typeof SplitType !== 'undefined') {
+    const splitTexts = document.querySelectorAll('.hitoba-msg-headline, .hitoba-title-large');
+    splitTexts.forEach(textEl => {
+      const split = new SplitType(textEl, { types: 'lines, words' });
+      gsap.from(split.words, {
+        scrollTrigger: {
+          trigger: textEl,
+          start: 'top 85%',
+        },
+        opacity: 0,
+        y: 20,
+        duration: 1,
+        stagger: 0.05,
+        ease: "power3.out"
+      });
+    });
+  }
+
+  // 3. Hitoba Parallax
   gsap.utils.toArray('.hitoba-parallax-wrapper').forEach(wrapper => {
     const img = wrapper.querySelector('img');
     if (img) {
@@ -2407,26 +2465,40 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Hitoba Sticky Counter
-  const values = gsap.utils.toArray('.hitoba-value-item');
+  // 4. Hitoba Sticky Counter (Scrubbed)
+  const valuesList = document.querySelector('.hitoba-values-list');
   const counterScroll = document.querySelector('.hitoba-counter-scroll');
+  const values = gsap.utils.toArray('.hitoba-value-item');
   const nums = document.querySelectorAll('.counter-num');
 
-  if (values.length && counterScroll) {
+  if (valuesList && counterScroll && values.length) {
+    const totalItems = values.length;
+
+    // Scrub the translation smoothly based on list scroll progress
+    gsap.to(counterScroll, {
+      yPercent: -100 * (totalItems - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: valuesList,
+        start: "top center",
+        end: "bottom center",
+        scrub: true
+      }
+    });
+
+    // Toggle active highlighting
     values.forEach((value, i) => {
       ScrollTrigger.create({
         trigger: value,
         start: "top center",
         end: "bottom center",
-        onEnter: () => updateCounter(i),
-        onEnterBack: () => updateCounter(i)
+        onToggle: self => {
+          if (self.isActive && nums[i]) {
+            nums.forEach(n => n.classList.remove('is-active'));
+            nums[i].classList.add('is-active');
+          }
+        }
       });
     });
-
-    function updateCounter(index) {
-      gsap.to(counterScroll, { yPercent: -100 * index, ease: "power2.out", duration: 0.5 });
-      nums.forEach(n => n.classList.remove('is-active'));
-      if (nums[index]) nums[index].classList.add('is-active');
-    }
   }
 });
