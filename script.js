@@ -2387,3 +2387,46 @@ function generatePlaceholders() {
 if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
   document.addEventListener('DOMContentLoaded', generatePlaceholders);
 }
+
+/* ---------- Hitoba About Interactions ---------- */
+document.addEventListener('DOMContentLoaded', () => {
+  // Hitoba Parallax
+  gsap.utils.toArray('.hitoba-parallax-wrapper').forEach(wrapper => {
+    const img = wrapper.querySelector('img');
+    if (img) {
+      gsap.to(img, {
+        yPercent: 20,
+        ease: "none",
+        scrollTrigger: {
+          trigger: wrapper,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true
+        }
+      });
+    }
+  });
+
+  // Hitoba Sticky Counter
+  const values = gsap.utils.toArray('.hitoba-value-item');
+  const counterScroll = document.querySelector('.hitoba-counter-scroll');
+  const nums = document.querySelectorAll('.counter-num');
+
+  if (values.length && counterScroll) {
+    values.forEach((value, i) => {
+      ScrollTrigger.create({
+        trigger: value,
+        start: "top center",
+        end: "bottom center",
+        onEnter: () => updateCounter(i),
+        onEnterBack: () => updateCounter(i)
+      });
+    });
+
+    function updateCounter(index) {
+      gsap.to(counterScroll, { yPercent: -100 * index, ease: "power2.out", duration: 0.5 });
+      nums.forEach(n => n.classList.remove('is-active'));
+      if (nums[index]) nums[index].classList.add('is-active');
+    }
+  }
+});
