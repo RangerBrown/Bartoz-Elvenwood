@@ -2222,6 +2222,49 @@ function initEnhancedCursor() {
 }
 
 // ============================================
+// FACTORY SLIDER LOGIC
+// ============================================
+function initFactorySlider() {
+  const track = document.getElementById('factorySliderTrack');
+  const prevBtn = document.getElementById('factoryPrevBtn');
+  const nextBtn = document.getElementById('factoryNextBtn');
+  const dots = document.querySelectorAll('.slider-dot');
+
+  if (!track || !prevBtn || !nextBtn || dots.length === 0) return;
+
+  let currentSlide = 0;
+  const totalSlides = dots.length;
+
+  function goToSlide(index) {
+    currentSlide = index;
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentSlide);
+    });
+  }
+
+  prevBtn.addEventListener('click', () => {
+    let newIndex = currentSlide - 1;
+    if (newIndex < 0) newIndex = totalSlides - 1;
+    goToSlide(newIndex);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    let newIndex = currentSlide + 1;
+    if (newIndex >= totalSlides) newIndex = 0;
+    goToSlide(newIndex);
+  });
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', (e) => {
+      const index = parseInt(e.target.getAttribute('data-index'));
+      goToSlide(index);
+    });
+  });
+}
+
+// ============================================
 // INITIALIZE EVERYTHING
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -2231,7 +2274,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initFloatingNav();
   initContextAwareHeader();
   initScrollButton();
-  initServicesImageSwap();
+  initFactorySlider();
+  // initServicesImageSwap(); // Disabled: using single static image for How We Work section
   initDraggableCarousels();
   initScrollProgress();
   initCounterAnimations();
