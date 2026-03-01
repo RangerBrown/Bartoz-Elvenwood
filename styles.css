@@ -1685,7 +1685,7 @@ button:hover .arrow-icon {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(3rem, 2rem + 3vw, 5rem) var(--section-padding-x) clamp(1.5rem, 1rem + 1vw, 2.5rem);
+  padding: clamp(6rem, 5rem + 5vw, 8rem) var(--section-padding-x) clamp(1.5rem, 1rem + 1vw, 2.5rem);
   background-color: var(--color-off-white);
   overflow: hidden;
 }
