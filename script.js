@@ -295,17 +295,9 @@ function initGenericHeroAnimations() {
     }
   }
 
-  // 2. Hero content animation
-  if (heroSection) {
-    const words = heroSection.querySelectorAll('.word');
-    masterTl.to(words, {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      stagger: 0.06,
-      ease: 'power3.out',
-    }, '-=0.2');
-  }
+  // 2. Hero content animation - REMOVED
+  // Instead of waiting for GSAP, the homepage hero title loads instantly for better UX
+  // See styles.css: .hero-headline .word { opacity: 1; transform: none; }
 
   // 3. Scroll button
   if (scrollBtn) {
