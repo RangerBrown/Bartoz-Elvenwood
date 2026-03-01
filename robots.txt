@@ -1,0 +1,25 @@
+# Robots.txt for Elvenwood Interiors
+# https://elvenwoodinteriors.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://elvenwoodinteriors.com/sitemap.xml
+
+# Disallow development/test files
+Disallow: /debug_*.html
+Disallow: /hitoba_*.html
+Disallow: /test_*.js
+Disallow: /compare_*.js
+Disallow: /*.png$
+Disallow: /node_modules/
+Disallow: /lang/
+
+# Allow important resources
+Allow: /images/
+Allow: /styles.css
+Allow: /script.js
+
+# Crawl-delay (optional, be kind to server)
+Crawl-delay: 1

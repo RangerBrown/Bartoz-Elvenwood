@@ -361,25 +361,7 @@ function initScrollAnimations() {
     });
   });
 
-  // --- Testimonial quotes: animate ALL instances (querySelectorAll) ---
-  document.querySelectorAll('.testimonial-quote').forEach(group => {
-    const words = group.querySelectorAll('.word');
-    if (!words.length) return;
-
-    gsap.to(words, {
-      opacity: 1,
-      y: 0,
-      duration: 0.8,
-      stagger: 0.04,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: group,
-        start: 'top 80%',
-        end: 'bottom 60%',
-        toggleActions: 'play none none none',
-      }
-    });
-  });
+  // --- Testimonial quotes: GSAP word stagger removed for simplicity ---
   // --- Project cards with stagger (improved) ---
   const projectCards = document.querySelectorAll('.project-card');
   if (projectCards.length) {
@@ -529,20 +511,7 @@ function initScrollAnimations() {
     });
   }
 
-  // --- Testimonial fade in ---
-  document.querySelectorAll('.testimonial').forEach((item) => {
-    gsap.to(item, {
-      opacity: 1,
-      y: 0,
-      duration: 0.8,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: item,
-        start: 'top 85%',
-        toggleActions: 'play none none none',
-      }
-    });
-  });
+  // --- Testimonial animation handled by initScrubbedParallax() for horizontal slide effect ---
 
   // --- Service extras fade in ---
   document.querySelectorAll('.service-extra-item').forEach((item) => {
@@ -1224,6 +1193,37 @@ function initDraggableTrack(trackSelector, prevBtnSelector, nextBtnSelector, cou
     velocityHistory = [];
   }
 
+  // Named handlers for proper cleanup
+  function handleMouseMove(e) {
+    if (!isDragging) return;
+    trackVelocity(e.clientX);
+    const delta = e.clientX - startX;
+    currentOffset = Math.max(maxScroll, Math.min(0, dragStartOffset + delta));
+    gsap.set(track, { x: currentOffset });
+  }
+
+  function handleMouseUp() {
+    if (!isDragging) return;
+    isDragging = false;
+    track.parentElement.style.cursor = 'grab';
+
+    velocity = getAverageVelocity();
+
+    // Apply momentum if velocity is significant
+    if (Math.abs(velocity) > MIN_VELOCITY * 2) {
+      applyMomentum();
+    } else {
+      snapToNearestSlide();
+    }
+  }
+
+  // Cleanup function to remove listeners and cancel animations
+  function cleanup() {
+    stopMomentum();
+    document.removeEventListener('mousemove', handleMouseMove);
+    document.removeEventListener('mouseup', handleMouseUp);
+  }
+
   // Mouse drag
   track.parentElement.addEventListener('mousedown', (e) => {
     stopMomentum();
@@ -1236,26 +1236,16 @@ function initDraggableTrack(trackSelector, prevBtnSelector, nextBtnSelector, cou
     track.parentElement.style.cursor = 'grabbing';
   });
 
-  document.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    trackVelocity(e.clientX);
-    const delta = e.clientX - startX;
-    currentOffset = Math.max(maxScroll, Math.min(0, dragStartOffset + delta));
-    gsap.set(track, { x: currentOffset });
-  });
+  document.addEventListener('mousemove', handleMouseMove);
+  document.addEventListener('mouseup', handleMouseUp);
 
-  document.addEventListener('mouseup', () => {
-    if (!isDragging) return;
-    isDragging = false;
-    track.parentElement.style.cursor = 'grab';
+  // Cleanup on page unload to prevent memory leaks
+  window.addEventListener('pagehide', cleanup);
 
-    velocity = getAverageVelocity();
-
-    // Apply momentum if velocity is significant
-    if (Math.abs(velocity) > MIN_VELOCITY * 2) {
-      applyMomentum();
-    } else {
-      snapToNearestSlide();
+  // Stop momentum when tab becomes hidden (saves CPU/battery)
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopMomentum();
     }
   });
 
@@ -1898,24 +1888,25 @@ function initScrubbedParallax() {
     });
   });
 
-  // ===== TESTIMONIALS - HORIZONTAL SLIDE =====
-  document.querySelectorAll('.testimonial').forEach((testimonial, index) => {
-    const direction = index % 2 === 0 ? -30 : 30;
-    gsap.fromTo(testimonial,
-      { x: direction, opacity: 0.5 },
+  // ===== TESTIMONIALS - SIMPLE FADE IN =====
+  const testimonialsList = document.querySelector('.testimonials-list');
+  if (testimonialsList) {
+    gsap.fromTo('.testimonial',
+      { opacity: 0, y: 30 },
       {
-        x: 0,
         opacity: 1,
-        ease: 'none',
+        y: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: 'power2.out',
         scrollTrigger: {
-          trigger: testimonial,
-          start: 'top 85%',
-          end: 'top 40%',
-          scrub: 1,
+          trigger: testimonialsList,
+          start: 'top 80%',
+          toggleActions: 'play none none none',
         }
       }
     );
-  });
+  }
 
   // ===== STAT COUNTERS - SCALE POP =====
   // Note: .stat-item is handled by initClientStoryAnimation() to avoid conflicts

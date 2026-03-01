@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
+    <script>document.documentElement.classList.remove('no-js');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Work — Portfolio of Kitchens, Wardrobes & Homes | Elvenwood Interiors</title>
     <meta name="description"
-        content="Explore Elvenwood's portfolio — modular kitchens, wardrobes, and complete home interiors across Bangalore. Real homes, real timelines, real budgets.">
+        content="Elvenwood's portfolio — modular kitchens, wardrobes & home interiors in HSR Layout, Electronic City, Whitefield, Sarjapur & across Bangalore. Real homes, real timelines, real budgets.">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -18,6 +19,9 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://elvenwoodinteriors.com/work">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,11 +35,24 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <div class="scroll-progress" id="scrollProgress"></div>
-    <div class="cursor" id="cursor"><span class="cursor-label">VIEW</span></div>
+    <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-label">VIEW</span></div>
 
     <header class="header header--dark" id="header">
         <div class="header-inner">
-            <span class="header-title">Interior Design Studio</span>
+            <div class="header-title">
+                <div class="lang-toggle" role="group" aria-label="Language selection">
+                    <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path
+                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                        </path>
+                        <path d="M2 12h20"></path>
+                    </svg>
+                    <button class="lang-toggle-btn active" data-lang="en" aria-label="Switch to English" aria-pressed="true">EN</button>
+                    <button class="lang-toggle-btn" data-lang="kn" aria-label="Switch to Kannada" aria-pressed="false">ಕನ್ನಡ</button>
+                </div>
+            </div>
             <a href="index.html" class="header-logo" aria-label="Elvenwood Interiors Home">
                 <img src="images/logo-full.png" alt="Elvenwood Interiors"
                     class="header-logo-img header-logo-img--default" width="978" height="276">
@@ -72,6 +89,7 @@
                     <span class="word word--italic">Work</span>
                 </h1>
                 <p class="work-hero-sub">Real homes, real stories.</p>
+                <span class="kannada-sub">ನಮ್ಮ ಕೆಲಸ</span>
             </div>
 
             <!-- Filter Tabs -->
@@ -292,6 +310,7 @@
                         <span class="word word--italic">your</span>
                         <span class="word word--italic">project?</span>
                     </h2>
+                    <span class="kannada-sub">ಶುರು ಮಾಡೋಣ್ವಾ?</span>
                     <a href="https://wa.me/917483226449" class="btn-pill btn-pill--outline magnetic-btn" target="_blank"
                         rel="noopener noreferrer">
                         <span>WHATSAPP US</span>
@@ -312,11 +331,13 @@
                 <div class="footer-contact">
                     <a href="mailto:info@elvenwood.in" class="footer-email">info@elvenwood.in</a>
                     <a href="tel:+917483226449" class="footer-phone">+91 74832 26449</a>
-                    <address class="footer-address">
-                        Experience Centre<br>
-                        Bommasandra, Bangalore<br>
-                        Mon-Sat, 10 AM - 7 PM
-                    </address>
+                    <a href="https://maps.app.goo.gl/YMsiBDRRbYBd9AKA9" target="_blank" rel="noopener noreferrer" class="footer-address-link" aria-label="View Experience Centre on Google Maps">
+                        <address class="footer-address">
+                            Experience Centre<br>
+                            Bommasandra, Bangalore<br>
+                            Mon-Sat, 10 AM - 7 PM
+                        </address>
+                    </a>
                 </div>
                 <nav class="footer-nav">
                     <a href="index.html">Home</a>
@@ -347,10 +368,10 @@
 
     </main><!-- End Main Content -->
 
-    <nav class="floating-nav" id="floatingNav">
+    <nav class="floating-nav" id="floatingNav" aria-label="Main navigation">
         <a href="index.html" class="floating-nav-link" data-section="home">HOME</a>
         <a href="services.html" class="floating-nav-link" data-section="services">SERVICES</a>
-        <a href="work.html" class="floating-nav-link active" data-section="work">WORK</a>
+        <a href="work.html" class="floating-nav-link active" data-section="work" aria-current="page">WORK</a>
         <a href="about.html" class="floating-nav-link" data-section="about">ABOUT</a>
     </nav>
 
@@ -372,6 +393,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>
 
